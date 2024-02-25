@@ -37,9 +37,9 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+      <%= link_to admins_backoffice_welcome_index_path, class: 'nav-link' do %>
+        <i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span>
+      <% end %>
     </li>
 
     <!-- Divider -->
@@ -52,10 +52,9 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>Administradores</span>
-      </a>
+      <%= link_to admins_backoffice_admins_index_path, class: 'nav-link' do %>
+        <i class="fas fa-fw fa-cog"></i><span>Administradores</span>
+      <% end %>
     </li>
 
     <!-- Divider -->
@@ -250,9 +249,7 @@
       <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">LAYOUT ADMINS - BACKOFFICE</h1>
         <%= yield %>
-        <%= link_to 'Sair', destroy_admin_session_path, method: :delete %>
 
       </div>
       <!-- /.container-fluid -->

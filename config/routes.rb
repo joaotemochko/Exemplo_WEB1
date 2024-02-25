@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     get 'welcome/index'
   end
   namespace :admins_backoffice do
+    get 'admins/index'
     get 'welcome/index'
+    get 'admins/edit/:id', to: 'admins#edit'
   end
   devise_for :users
   devise_for :admins
